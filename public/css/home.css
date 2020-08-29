@@ -1,0 +1,15 @@
+/* Show it is fixed to the top */
+body {
+  min-height: 75rem;
+  padding-top: 4.5rem;
+}
+
+.jumbotron {
+		 margin-bottom: 20px;
+		 height: 230px;
+		 color: black; /* Le texte sera affiché en blanc */
+		 
+		 background:#339oFF;
+		}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">

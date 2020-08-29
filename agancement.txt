@@ -1,0 +1,14 @@
+server.js -- le truc qu'on lance pour que ça marche
+package.json -- fichier qui définit les infos du projet
+node_modules -- dossier ou y'a toute les extensions qui font marcher le projet
+app
+    |config
+        |db.config.js -- Fichier on l'on défini quelle DB on utilise
+        |
+    |controllers Dossier ou l'on écrit le corps des fonctions qu'on appel pour répondre aux requêtes
+        |
+    |models.js Dossier on l'on va définir toute les tables qu'on utilise dans la base de donnée
+        |
+    |routes Dossier ou qu'on fait le lien entre les webservice et les fonctions qu'on a écrit 
+        |
+    |

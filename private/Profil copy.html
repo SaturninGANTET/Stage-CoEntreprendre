@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Profil</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbar-fixed/">
+
+    <!-- Bootstrap core CSS 
+<link href="../assets/dist/css/bootstrap.css" rel="stylesheet">	-->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .col-lg-offset-8 {
+            margin-left: 80%;
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="/css/Profil.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Entrepreneur</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Profil">Profil</a>
+                </li>
+                <li class="nav-item" align="right">
+                    <a class="nav-link" href="/logout">Deconnexion</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <script id="templateProfil" type="text/template">
+		<h2 class="big"> <%=nom %>  <%=prenom %> </h2>
+		<p><%=resume %></p>
+		<ul class="about-info mt-4 px-md-0 px-2">
+		        <li class="d-flex"><span>Métier:</span> <span> <%=metier %> </span></li>
+		        <li class="d-flex"><span>Note:</span> <span> </span></li>
+		        <li class="d-flex"><span>Adresse:</span> <span> <%=localisationRegion %> </span></li>
+                <li class="d-flex"><span>Lieu de travail:</span> <span> </span></li>
+	          	<li class="d-flex"><span>Email:</span> <span> <%=adresseMail %> </span></li>
+       </ul>
+				
+</script>
+
+    <section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
+        <h5 class="big"> .</h5>
+        <h5 class="big"> .</h5>
+        <div class="col-lg-offset-8 " id="historique">
+            <a class="btn btn-secondary" href="historique" role="button">Historique</a>
+        </div>
+        <div class="container">
+            <div class="row d-flex no-gutters">
+                <div class="col-md-6 col-lg-6 d-flex">
+                    <div class="img-about img d-flex align-items-stretch">
+                        <div class="overlay"></div>
+                        <div class="img d-flex align-self-stretch align-items-center"
+                            style="background-image:url(Image/profil-avatar.jpg);">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 pl-md-5 py-5">
+                    <!--			 <div class="row justify-content-start pb-3">
+        <div class="col-md-12 heading-section ftco-animate">   -->
+                    <div id=resultProfil> </div>
+                    <a class="btn btn-secondary" id="modif" href="/modificationProfil" role="button"> Modifier </a>
+                    <a class="btn btn-secondary" id="envoi" href="/Devis" role="button" style="display: none;"> Contacter </a>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <script id="templateOffres" type="text/template">
+		<div class="single-service col-lg-6 col-md-6 mb-30">
+			<div class="dec">
+				<h4 class="mt-30"><a href=<%="/annonce/" + id%> style="color:#f08b43;"> <%=title %> </a></h4>			
+				<p class="mt-20">
+				<%=description %> </p>								
+			</div>
+		</div>
+				
+</script>
+
+    <script id="templateBesoins" type="text/template">
+		<div class="single-service col-lg-6 col-md-6 mb-30">
+			<div class="dec">
+				<h4 class="mt-30"><a href=<%="/annonce/" + id%> style="color:#0bbf56;"> <%=title %> </a></h4>			
+				<p class="mt-20">
+				<%=description %> </p>								
+			</div>
+		</div>
+				
+</script>
+
+    <script id="templateRecommandation" type="text/template">
+		<div class="single-service col-lg-6 col-md-6 mb-30">
+			<div class="dec">
+				<h4 class="mt-30"><a href="#" style="color:#A4A4A4;"> <%=note %> </a></h4>			
+				<p class="mt-20">
+				<%=texte %> </p>								
+			</div>
+		</div>
+				
+</script>
+    <section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="service">
+        <div class="container" style="border-width:1px; border-style:solid; border-color:#f08b43;">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content pb-70 col-lg-8">
+                    <div class="title text-center">
+                        <h1 class="mb-10">OFFRES</h1>
+                        <p>Prestations et formations</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id=resultOffres> </div>
+
+            </div>
+
+            <div class="col-lg-offset-8 col-lg-3" id="ajouterOffre">
+                <a class="btn btn-sec" href="/creationAnnonce" role="button"> Ajouter </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="service">
+        <div class="container" style="border-width:1px; border-style:solid; border-color:#0bbf56">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content pb-70 col-lg-8">
+                    <div class="title text-center">
+                        <h1 class="mb-10">BESOINS</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id=resultBesoins> </div>
+            </div>
+
+            <div class="col-lg-offset-8 col-lg-3" id="ajouterBesoin">
+                <a class="btn btn-secondary" href="/creationAnnonce" role="button; style=" background-color:#f08b43;">
+                    Ajouter </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="service">
+        <div class="container" style="border-width:1px; border-style:solid; border-color:#A4A4A4">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content pb-70 col-lg-8">
+                    <div class="title text-center">
+                        <h1 class="mb-10">Recommandation</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id=resultReco> </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+    <script src="../assets/dist/js/bootstrap.bundle.js"></script>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script type="text/javascript" src="/js/profil.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Inscription</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/checkout/">
+
+    
+    <!-- Bootstrap core CSS 
+<link href="../assets/dist/css/bootstrap.css" rel="stylesheet">	-->
+
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/Profil.css" rel="stylesheet">
+  </head>
+  
+    <body>
+    <nav class="navbar navbar-expand navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">Entrepreneur</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ac">
+        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Profil">Profil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Quitter</a>
+      </li>
+    </ul>
+    
+  </div>
+</nav>
+
+
+  <body class="bg-light">
+    <div class="container">
+  <div class="py-5 text-center">
+    <img class="d-block mx-auto mb-4" src="Image/logo.jpg" alt="" width="150" height="150">
+    <h2>Création de compte</h2>
+    <p class="lead">Bienvenu dans la communauté co-entreprendre 78</p>
+  </div>
+
+<div class="container" style="border-width:1px; border-style:solid; border-color:#0bbf56;">
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">Profil</h4>
+      <form class="needs-validation" novalidate id="form">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="firstName">Prénom</label>
+            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="lastName">Nom</label>
+            <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Valid last name is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="metier">Intitulé métier</label>
+          <input type="text" class="form-control" id="métier" placeholder="" required>
+          <div class="invalid-feedback" style="width: 100%;">
+           	Your username is required.
+            </div>
+          </div>
+	    
+	 <div class="mb-3">
+         	 <label for="nomEntreprise">Nom de l'entreprise </label>
+          	<input type="text" class="form-control" id="nomEntreprise" placeholder="" >
+	 </div>	
+      </div>
+
+        <div class="mb-3">
+          <label for="email">Email </label>
+          <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+          <div class="invalid-feedback">
+            Please enter a valid email address.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="description">Description</label>
+          <input type="text" class="form-control" id="description" placeholder="">
+          <div class="invalid-feedback">
+            Please describe yourself.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="address">Adresse <span class="text-muted">(Optional)</span></label>
+          <input type="text" class="form-control" id="address2" placeholder="">
+        </div>
+
+        <div class="row">
+          <div class="col-md-5 mb-3">
+            <label for="country">Pays</label>
+            <select class="custom-select d-block w-100" id="country" required>
+              <option value="">Choose...</option>
+              <option>France</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid country.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="Region">Region</label>
+            <input type="text" class="form-control" id="region" placeholder="">
+            <div class="invalid-feedback">
+              Please provide a valid state.
+            </div>
+          </div>
+        </div>
+        
+        <label> Lieu de travail</label>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+	        <div class="custom-control custom-checkbox">
+	          <input type="checkbox" class="custom-control-input" id="same-address">
+	          <label class="custom-control-label" for="same-address">Chez client</label>
+	        </div>
+          </div>
+          <div class="col-md-6 mb-3">
+	        <div class="custom-control custom-checkbox">
+	          <input type="checkbox" class="custom-control-input" id="save-info">
+	          <label class="custom-control-label" for="save-info">à distance</label>
+	        </div>
+	      </div>
+	    </div>
+	    
+	    
+	    <div class="mb-3">
+            <label for="Tag">Compétences</label>
+            <select class="custom-select d-block w-100" id="compétence" multiple size="2" required>
+              <option value="1">Communication</option>
+              <option value="2">Marketing</option>
+              <option value="3">Informatique</option>
+              <option value="4">Dev web</option>
+			  <option value="4">Conseil financier</option>
+			  <option value="4">Conseil RH</option>
+			  <option value="4"> Conseil Strategie</option>
+			  <option value="4"> Conseil Management</option>
+			  <option value="4">Coach dirigeant</option>
+			  <option value="4">Coache d'équipe</option>
+			  <option value="4">Ingenieur méca </option>
+			  <option value="4"> Ingenieur Aéro </option>
+			  <option value="4"> Ingénieur techno</option>
+			  <option value="4"> Ingénieur Chef de projet</option>
+            </select>
+            <div class="invalid-feedback">
+              Please provide a valid state.
+            </div>
+          </div>
+</div>
+	   
+
+        <hr class="mb-4">
+        <button class="btn btn-secondary btn-lg btn-block" type="submit">Continuer</button>
+      </form>
+    </div>
+  </div>
+
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>
+        <script src="form-validation.js"></script>
+        <script src="/js/form.js"></script>
+    </body>
+</html>
